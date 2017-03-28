@@ -49,8 +49,7 @@ def solution(A):
     return ans
 
 
-# Better solution to Odd-Occurrences-In-Array by codilityPython
-
+# Better solution to Odd-Occurrences-In-Array using XOR
 def solution2(A):
     result = 0
     for number in A:
