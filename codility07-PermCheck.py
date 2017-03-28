@@ -39,12 +39,10 @@
 # expected worst-case space complexity is O(N), beyond input storage (not counting the storage required for input arguments).
 # Elements of input arrays can be modified.
 
-A = [3, 2, 1]
-
 
 # Bad XOR solution, because there are some cases it doesn't work, for example:
-# A = [3, 5, 6]
-def solutionBad(A):
+# A = [3, 5, 6] should return 0
+def solution_bad(A):
     result = 0
     for idx in range(len(A)):
         result ^= (idx+1) ^ A[idx]
@@ -53,7 +51,7 @@ def solutionBad(A):
     else:
         return 0
 
-
+# Working solution
 def solution(A):
     n = len(A)
     count = [0]*n
@@ -67,4 +65,4 @@ def solution(A):
     return 1
 
 
-print(solution(A))
+print(solution([3, 2, 1]), "(Right answer: 1)")

@@ -43,26 +43,24 @@
 # expected worst-case space complexity is O(N), beyond input storage (not counting the storage required for input arguments).
 # Elements of input arrays can be modified.
 
-A = [5, 6, 2, 4, 1]
-
 
 def solution(A):
     if len(A) <= 1:
         return 0
 
-    sumLeft = 0
-    sumRight = 0
+    sum_left = 0
+    sum_right = 0
     for val in A:
-        sumRight += val
+        sum_right += val
 
-    minP = 10000000
-    for i in range(0,len(A)-1):
-        sumLeft += A[i]
-        sumRight -= A[i]
-        diff = abs(sumLeft - sumRight)
-        if i == 0 or diff < minP:
-            minP = diff
+    min_p = 10000000
+    for i in range(0, len(A)-1):
+        sum_left += A[i]
+        sum_right -= A[i]
+        diff = abs(sum_left - sum_right)
+        if i == 0 or diff < min_p:
+            min_p = diff
 
-    return minP
+    return min_p
 
-print(solution(A))
+print(solution([5, 6, 2, 4, 1]), "(Right answer: 4)")
