@@ -22,7 +22,7 @@ def solution(A):
     return len(a_set)
 
 
-print(solution([]), "(Right answer: 0)")
+print(solution([]), "(Right answer: 0)k")
 print(solution([0]), "(Right answer: 1)")
 print(solution([0, 0]), "(Right answer: 1)")
 print(solution([-1, -1]), "(Right answer: 1)")
